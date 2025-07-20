@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagem</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body id="body">
+   
+<div class="container">
+    <h1 id="boas-vindas">Seja Bem-Vindo!</h1>
+
+    <!-- Botão para abrir modal -->
+    <a href="index.html"><button>Voltar ao Login</button></a>
+    <button onclick="abrirModal()">Enviar Mensagem</button>
+    <div class="footer">
+        <p>&copy;AFDev<></p>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="fechar" onclick="fecharModal()">&times;</span>
+        <h2 id="felicite">Felicite Kota Afonso!💆 </h2>
+        <textarea id="mensagem" placeholder="Digite aqui sua mensagem...">Feliz Aniversário!
+        </textarea>
+        <button onclick="enviarMensagem()">Enviar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
