@@ -15,10 +15,18 @@
       document.getElementById("modal").style.display = "none";
     }
 
-    // WhatsApp Api
+   // WhatsApp Api
     function enviarMensagem() {
-      const msg = document.getElementById("mensagem").value;
+      const msg = document.getElementById("mensagem").value.trim();
       const numero = "244934404715"; 
       const link = `https://wa.me/${numero}?text=${encodeURIComponent(msg)}`;
-      window.open(link, "_blank");
-    }
+      const erro = document.getElementById("errormessage");
+      if(msg == ""){
+        erro.innerHTML = `${nome}, digite qualquer coisa.`
+        erro.style.color = "red";
+        
+      } else{
+         window.open(link, "_blank");
+      }
+  }
+
